@@ -1,14 +1,11 @@
 <?php
-    $conn = new mysqli("localhost", "root", "", "Test1_Reg");
+    $conn = new mysqli("localhost", "root", "0000", "Test1_Reg");
     $FName = $_POST['FName'];
     $LName = $_POST['LName'];
     $gender = $_POST['gender'] ?? null; // Use null coalescing to handle missing key
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $stmt = $conn->prepare("INSERT INTO Users (FName, LName, gender, email, password) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssss", $FName, $LName, $gender, $email, $password);
-    $stmt->execute();
-    $stmt->close();
+    $conn->query("INSERT INTO Users (FName, LName, gender, email, password) VALUES ('$FName', '$LName', '$gender', '$email', '$password')");
     $conn->close();
 ?>
 
