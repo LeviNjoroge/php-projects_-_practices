@@ -1,12 +1,13 @@
 <?php
-    $conn = new mysqli("localhost", "root", "0000", "Test1_Reg");
-    $FName = $_POST['FName'];
+    $conn = new mysqli("localhost", "root", "", "Test1_Reg");
+
+    $Fname = $_POST['FName'];
     $LName = $_POST['LName'];
-    $gender = $_POST['gender'] ?? null; // Use null coalescing to handle missing key
+    $gender = $_POST['gender'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $conn->query("INSERT INTO Users (FName, LName, gender, email, password) VALUES ('$FName', '$LName', '$gender', '$email', '$password')");
-    $conn->close();
+    $conn->query("INSERT INTO Users(FName, LName, Gender, Email, Password) VALUES('$Fname', '$LName', '$gender', '$email', '$password')");
+    
 ?>
 
 <!DOCTYPE html>
