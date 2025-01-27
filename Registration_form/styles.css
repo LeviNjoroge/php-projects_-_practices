@@ -1,0 +1,35 @@
+#RegForm {
+    border: 2px solid black;
+    border-radius: 1%;
+    margin-inline: 30%;
+    margin-top: 50px;
+    width: 500px;
+    padding: 10px;
+    background-color: rgba(228, 250, 255, 0.5);
+}
+
+#formElements {
+    margin-inline: 2%;
+    margin-bottom: 10px;
+}
+
+.highlight{
+    margin-top: 0%;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+}
+
+input{
+    padding: 5px;
+}
+
+.submitButton{
+    margin-inline: 2%;
+    border: 1px solid black;
+    border-radius: 5%;
+    background-color:rgba(228, 250, 255, 0.95);
+    margin-top: 5px;
+    width: 100px;
+    height: 30px;
+}
